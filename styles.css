@@ -1,0 +1,203 @@
+/* ----- TO DO: ADD CSS RESET CODE HERE ----- */
+
+
+
+/* ----- GLOBAL/MOBILE CUSTOM STYLES START HERE ----- */
+/* ----- ROOT ELEMENT FOR CSS VARIABLES ----- */
+:root{
+    --wht: #f2f2f2;
+    --lt-gray: #eaeaea;
+    --med-gray: #555;
+    --dk-gray: #222;
+
+    /* Colors from Huemint.com */
+    --hue-dk: #15242f;
+    --hue-lt: #dce6eb;
+    --hue-blue: #00aecf;
+    --hue-red: #fd4635;
+
+    --fonts: Arial, Verdana, sans-serif;
+}
+
+/* ----- BODY STYLES ----- */
+body{
+    font-family: var(--fonts);
+    background-color: var(--hue-dk);
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='64' height='64' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%2315242f'/><path d='M32 64c0 17.674-14.326 32-32 32s-32-14.326-32-32 14.326-32 32-32 32 14.326 32 32zm64 0c0 17.674-14.326 32-32 32S32 81.674 32 64s14.326-32 32-32 32 14.326 32 32zm-32 0c0 17.674-14.326 32-32 32S0 81.674 0 64s14.326-32 32-32 32 14.326 32 32zM32 0c0 17.674-14.326 32-32 32S-32 17.674-32 0s14.326-32 32-32S32-17.674 32 0zm64 0c0 17.674-14.326 32-32 32S32 17.674 32 0s14.326-32 32-32S96-17.674 96 0zM64 0c0 17.674-14.326 32-32 32S0 17.674 0 0s14.326-32 32-32S64-17.674 64 0zM32 32c0 17.674-14.326 32-32 32s-32-14.326-32-32S-17.674 0 0 0s32 14.326 32 32zm64 0c0 17.674-14.326 32-32 32S32 49.674 32 32 46.326 0 64 0s32 14.326 32 32zm-32 0c0 17.674-14.326 32-32 32S0 49.674 0 32 14.326 0 32 0s32 14.326 32 32z'  stroke-width='0.5' stroke='%231c384e' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(-84,-8)' fill='url(%23a)'/></svg>");
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    line-height: 1.35;
+}
+
+/* ----- SKIP LINK STYLES ----- */
+/* FROM WEB-AIM:  */
+#skip{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#skip:focus{
+    position: static;
+    width: auto;
+    height: auto;
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+/* ----- HEADER/MAIN/FOOTER STYLES ----- */
+header, main, footer{
+    padding: 2rem 1rem;
+    width: calc(100% - 2rem);
+    max-width: calc(1100px - 2rem);
+    background-color: var(--lt-gray);
+    color: var(--hue-dk);
+    margin: 0 auto;
+}
+
+/* ----- HEADER/FOOTER STYLES ----- */
+header, footer{
+    text-align: center;
+    background-color: var(--hue-dk);
+    color: var(--hue-lt);
+}
+
+
+/* ----- HEADING STYLES ----- */
+h1, h2{
+    font-weight: bold;
+    max-width: 45ch;
+}
+
+h1{
+    font-size: 3rem;
+    margin: 12px auto 32px;
+}
+
+h2{
+    font-size: 1.75rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ----- DECORATIVE SVG IN H2 STYLES ----- */
+h2 svg{
+    stroke: var(--hue-red);
+}
+
+/* ----- LINK STYLES ----- */
+a{
+    /* color: var(--wht); */
+    color: var(--hue-lt);
+    display: block;
+    padding: 16px;
+    text-decoration-thickness: 4px;
+    transition: all 500ms;
+}
+
+p > a{
+    display: inline;
+    padding: 0;
+    text-decoration-thickness: 3px;
+    color: var(--hue-dk);
+}
+
+a:hover{
+    text-decoration-color: var(--hue-red);
+}
+
+a:focus{
+    outline: 4px solid var(--hue-blue);
+    outline-offset: 2px;
+    text-decoration-color: var(--hue-red);
+}
+
+/* ----- NAV STYLES ----- */
+nav a{
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: var(--hue-lt);
+    color: var(--hue-dk);
+    border: 6px solid var(--hue-lt);
+    border-radius: 32px;
+    text-decoration: none;
+    max-width: calc(350px - 44px);
+    margin: 16px auto;
+    transition: all 500ms;
+}
+
+nav a:hover{
+    border-color: var(--hue-red);
+}
+
+nav a:focus{
+    box-shadow: 0 0 0 10px var(--hue-red);
+    outline-offset: 0;
+}
+
+/* ----- SECTION STYLES ----- */
+section{
+    margin: 32px 0;
+}
+
+/* ----- DECORATIVE DIV STYLES ----- */
+.divider{
+    height: 12px;
+    width: 100%;
+    background-image: url("images/sparkle.svg");
+    background-size: contain;
+    background-position: center;
+}
+
+/* ----- CODE STYLES ----- */
+pre{
+    padding: 0 16px;
+    width: calc(100% - 32px);
+    max-width: calc(550px - 32px);
+    overflow-x: scroll;
+    margin: 32px auto;
+    background-color: var(--med-gray);
+    color: var(--hue-lt);
+}
+
+pre code{
+    padding: 0 12px;
+}
+
+code{
+    font-family: monospace;
+}
+
+/* ----- TEXT STYLES ----- */
+p{
+    padding: 16px 0;
+    width: 100%;
+    max-width: 65ch;
+    margin: 0 auto;
+}
+
+strong{
+    font-weight: bold;
+    text-decoration: 4px solid underline var(--hue-red);
+}
+
+/* ----- MEDIA QUERY - SMALL/MEDIUM SCREENS ----- */
+@media screen and (min-width: 550px){
+    nav ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+}
+
+/* ----- MEDIA QUERY - LARGE SCREENS ----- */
+@media screen and (min-width: 900px){
+    nav ul{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

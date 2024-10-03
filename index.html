@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to CSS</title>
+    <meta name="author" content="Jessica Barnett">
+    <meta name="description" content="Our first activity about cascading stylesheets. Let's learn how to add C.S.S. to a website!">
+
+    <!-- Favicon Code -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- TO DO: Link to CSS File Here -->
+    
+</head>
+<body>
+    <a href="#main-content" id="skip">Skip to Main Content</a>
+    <header>
+        <h1>Introduction to CSS</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#linking">Adding CSS</a></li>
+                <li><a href="#reset">The CSS Reset</a></li>
+                <li><a href="#viewing">Dev Tools for CSS</a></li>
+                <li><a href="#validate">Validating CSS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <section id="linking">
+            <!-- TO DO: See the item above to link to our CSS file -->
+            <h2>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circles-relation" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9.183 6.117a6 6 0 1 0 4.511 3.986" />
+                    <path d="M14.813 17.883a6 6 0 1 0 -4.496 -3.954" />
+                </svg>
+                Adding CSS</h2>
+            <p>To link to our CSS, we will add a <code>link</code> element to the head of our HTML files. There are two required attributes on this tag: the <code>href</code> and the <code>rel</code>. The <code>href</code> attribute should be set to the path to your stylesheet. This should be a relative link, and if your CSS is in the same folder as your HTML, you just need to use the name of your CSS file. The <code>rel</code> attribute tells the browser what the relationship of that file is to your HTML, and it should be set to a value of "stylesheet". <strong>Both attributes</strong> need to be included correctly in order for your CSS to load.</p>
+            <pre>
+                <code>
+<!--             -->&lt;link rel="stylesheet" href="styles.css"&gt;
+                </code>
+            </pre>
+        </section>
+
+        <div class="divider"></div>
+
+        <section id="reset">
+            <!-- TO DO: Add the CSS Reset code to the CSS file -->
+            <h2>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circles-relation" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9.183 6.117a6 6 0 1 0 4.511 3.986" />
+                    <path d="M14.813 17.883a6 6 0 1 0 -4.496 -3.954" />
+                </svg>
+                The CSS Reset</h2>
+            <p>As we saw in our lecture, browsers include their own stylesheet that adds some very basic CSS to your pages. We also saw that those stylesheets differ between browsers. To help ensure that our styles are consistent in different browsers, we can add some code referred to as the <strong>CSS Reset</strong> to our stylesheets.</p>
+
+            <p>The CSS Reset code targets your HTML elements and removes any default margin, padding, font sizes, font weights, and borders. You will <strong>always</strong> need to add this to your CSS before you write any styles of your own. Our files are read from top to bottom by the browser, so adding this to the top of the file resets all of the browser styles before your styles are applied.</p>
+
+            <p>You can find the CSS Reset code below, or can view it on the web on <a href="https://meyerweb.com/eric/tools/css/reset/">Eric Meyer's website</a>.</p>
+            <pre>
+                <code>
+<!--             -->/* 
+<!--             -->    http://meyerweb.com/eric/tools/css/reset/ 
+<!--             -->    v2.0 | 20110126
+<!--             -->    License: none (public domain)
+<!--             -->*/
+
+<!--             -->html, body, div, span, applet, object, iframe,
+<!--             -->h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+<!--             -->a, abbr, acronym, address, big, cite, code,
+<!--             -->del, dfn, em, img, ins, kbd, q, s, samp,
+<!--             -->small, strike, strong, sub, sup, tt, var,
+<!--             -->b, u, i, center,
+<!--             -->dl, dt, dd, ol, ul, li,
+<!--             -->fieldset, form, label, legend,
+<!--             -->table, caption, tbody, tfoot, thead, tr, th, td,
+<!--             -->article, aside, canvas, details, embed, 
+<!--             -->figure, figcaption, footer, header, hgroup, 
+<!--             -->menu, nav, output, ruby, section, summary,
+<!--             -->time, mark, audio, video {
+<!--             -->	margin: 0;
+<!--             -->	padding: 0;
+<!--             -->	border: 0;
+<!--             -->	font-size: 100%;
+<!--             -->	font: inherit;
+<!--             -->	vertical-align: baseline;
+<!--             -->}
+<!--             -->/* HTML5 display-role reset for older browsers */
+<!--             -->article, aside, details, figcaption, figure, 
+<!--             -->footer, header, hgroup, menu, nav, section {
+<!--             -->	display: block;
+<!--             -->}
+<!--             -->body {
+<!--             -->	line-height: 1;
+<!--             -->}
+<!--             -->ol, ul {
+<!--             -->	list-style: none;
+<!--             -->}
+<!--             -->blockquote, q {
+<!--             -->	quotes: none;
+<!--             -->}
+<!--             -->blockquote:before, blockquote:after,
+<!--             -->q:before, q:after {
+<!--             -->	content: '';
+<!--             -->	content: none;
+<!--             -->}
+<!--             -->table {
+<!--             -->	border-collapse: collapse;
+<!--             -->	border-spacing: 0;
+<!--             -->}
+                </code>
+            </pre>
+        </section>
+
+        <div class="divider"></div>
+
+        <section id="viewing">
+            <!-- TO DO: Follow along as we see how we can use the dev tools to help with CSS -->
+            <h2>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circles-relation" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9.183 6.117a6 6 0 1 0 4.511 3.986" />
+                    <path d="M14.813 17.883a6 6 0 1 0 -4.496 -3.954" />
+                </svg>
+                Dev Tools for CSS</h2>
+            <p>When writing code for the web in any language, you should have your page open in the browser as you work and should also have your dev tools open to allow you to spot any errors or issues. When writing CSS, the dev tools are especially helpful.</p>
+
+            <p>The Chrome Dev tools are a great way to test out different CSS settings, they will help you spot places where you've included invalid values for your properties (and how to fix them!), and they show you exactly how your styles are being applied. You can turn styles on and off, change their values, add new styles, and even set interactive elements to hover, focus, and other states to allow you to test styles for those properties.</p>
+            <p><strong>Remember:</strong> you can easily open the dev tools by right-clicking on your page and choosing "inspect" from the menu that appears.</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <section id="validate">
+            <!-- TO DO: Validate your HTML and CSS files when finished with the rest of the work -->
+            <h2>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circles-relation" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9.183 6.117a6 6 0 1 0 4.511 3.986" />
+                    <path d="M14.813 17.883a6 6 0 1 0 -4.496 -3.954" />
+                </svg>
+                Validating CSS</h2>
+            <p>Just like our HTML, we will be validating our CSS files to ensure that we haven't caused any errors or other issues with the file. <a href="https://jigsaw.w3.org/css-validator/#validate_by_input">The CSS Validator</a> website works just like the HTML validator by checking your CSS to ensure that property values are valid and that the syntax is correct. It will not catch all types of issues, but that is why we also test our sites.</p>
+
+            <p>As we learn more about CSS, you will be using <a href="">CSS variables</a> to add color, fonts, and other styles to your pages, so you will see some warning messages related to these in validation. That is totally fine, it is just saying that it doesn't test CSS variables for functionality or value because they can change. Any other errors or warnings should be corrected, though.</p>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2024 - Introduction to Web Coding</p>
+    </footer>
+</body>
+</html>
