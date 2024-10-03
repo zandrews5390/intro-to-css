@@ -1,2 +1,2 @@
-# css-selectors
-Starter files for the CSS Selectors activity for GIT501.
+# Introduction to CSS
+Starter files for the Introduction to CSS activity for GIT501.
